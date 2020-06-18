@@ -27,14 +27,14 @@ import {
 import createAnimatedSwitchNavigator from 'react-navigation-animated-switch';
 import { createAppContainer } from 'react-navigation';
 import { Transition } from 'react-native-reanimated';
-import HomeScreen from './pages/Home';
-import TestScreen from './pages/Test';
-import TruthScreen from './pages/Test2';
+import splashScreen from './pages/Splash';
+import homeScreen from './pages/Home';
+import truthScreen from './pages/Truth';
 
 const myRoutes = createAnimatedSwitchNavigator({
-  Home: HomeScreen,
-  Test: TestScreen,
-  Test2: TruthScreen,
+  Splash: splashScreen,
+  Home: homeScreen,
+  Truth: truthScreen,
 },
 {
   transition: (
