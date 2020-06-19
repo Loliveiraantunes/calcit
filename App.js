@@ -39,53 +39,11 @@ const myRoutes = createAnimatedSwitchNavigator({
 {
   transition: (
     <Transition.Together>
-      <Transition.Out
-        type="slide-bottom"
-        durationMs={400}
-        interpolation="easeIn"
-      />
-      <Transition.In type="fade" durationMs={500} />
-    </Transition.Together>
+      <Transition.Out type="fade" interpolation="easeOut" durationMs={350} />
+      <Transition.In type="slide-left" interpolation="easeInOut" durationMs={500} />
+    </Transition.Together>  
   ),
 });
 
 export default createAppContainer(myRoutes);
 
-const styles = StyleSheet.create({
-  scrollView: {
-    backgroundColor: Colors.lighter,
-  },
-  engine: {
-    position: 'absolute',
-    right: 0,
-  },
-  body: {
-    backgroundColor: Colors.white,
-  },
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
-  },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
-    color: Colors.black,
-  },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
-    color: Colors.dark,
-  },
-  highlight: {
-    fontWeight: '700',
-  },
-  footer: {
-    color: Colors.dark,
-    fontSize: 12,
-    fontWeight: '600',
-    padding: 4,
-    paddingRight: 12,
-    textAlign: 'right',
-  },
-});
