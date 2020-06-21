@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { AppRegistry, StyleSheet, Text, View, Button, Alert, Image } from 'react-native';
+import { AppRegistry, StyleSheet, Text, View, Button, Alert, Image,StatusBar, ImageBackground } from 'react-native';
   
 export default class Splash extends React.Component{
 
@@ -10,9 +10,12 @@ export default class Splash extends React.Component{
     }
       render(){
         return (
-            <View style={styles.container}>
-                <Image source={require("../img/splash_img.png")} style={styles.bgImage} />
-            </View>
+            <>
+              <ImageBackground source={require("../img/splash_img.png")} style={styles.bgImage}>
+                  <StatusBar  barStyle="light-content" backgroundColor="transparent" translucent={true} />
+                </ImageBackground>
+            </>
+          
         );
     }
 }

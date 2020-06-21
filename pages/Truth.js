@@ -1,12 +1,14 @@
 import React, {Component} from 'react';
-import {View, Text, Button, StyleSheet, TouchableOpacity} from 'react-native';
+import Style from '../assets/styles'
+import {View, Text, Button, StyleSheet, TouchableOpacity,StatusBar} from 'react-native';
 
 const txtTruth = "BK > McDonalds"
 
 export default class Truth extends React.Component{
     render(){
         return(
-            <View style={{justifyContent: "center", alignItems: "center"}}>
+            <View style={Style.container}>
+                <StatusBar  barStyle="light-content" backgroundColor="transparent" translucent={true} />
                 <Text style={{fontSize: 30}}>{txtTruth}</Text>
                 <TouchableOpacity style = {styles.button}
                 onPress = {() => this.props.navigation.navigate("Home")}>
