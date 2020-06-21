@@ -5573,6 +5573,11 @@ react-native-reanimated@^1.9.0:
   dependencies:
     fbjs "^1.0.0"
 
+react-native-root-view-background@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/react-native-root-view-background/-/react-native-root-view-background-1.0.2.tgz#f1aa7cf6a7dfe0461d108844d963ddabd588791c"
+  integrity sha512-2EbvrvVph9xkWzhkO7N9t5fcDDBZFv55EIuBCEE3OCZoB8rv2gt8ZBXvlQXuwgQ4C5Ijil5HCenGyh5M3hFNqQ==
+
 react-native-safe-area-context@^3.0.5:
   version "3.0.5"
   resolved "https://registry.yarnpkg.com/react-native-safe-area-context/-/react-native-safe-area-context-3.0.5.tgz#3dd9bf2fea3b51f894b9849f11108ac303bbefe5"

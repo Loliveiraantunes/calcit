@@ -1,20 +1,32 @@
 
 import React, {Component} from 'react';
-import {View, Text, Button} from 'react-native';
+import {View, Text, Button, StyleSheet, ScrollView, StatusBar} from 'react-native';
+import { SafeAreaView } from 'react-navigation';
+import Style from '../assets/styles'
+
+const styles = StyleSheet.create({
+    scrollView: {
+    marginHorizontal: 20,
+    },
+    text: {
+    fontSize: 42,
+    },
+});
 
 export default class Home extends React.Component{
     render(){
         return (
-            <View style={{flex: 1, justifyContent: "center"}}>
-                <Text style={{fontSize: 30}}>Hello World</Text>
-                <Button title="<= Back to Splash" 
-                onPress = {() => this.props.navigation.navigate("Splash")}
-                ></Button>
-                <Text style={{height: 30}}> </Text>
-                <Button title="Go to Truth=>"
-                onPress ={() => this.props.navigation.navigate("Truth")}
-                ></Button>
-            </View>
+            <SafeAreaView style={Style.container}>
+                <StatusBar  barStyle="light-content" backgroundColor="transparent" translucent={true} />
+                <ScrollView style={styles.scrollView}>
+                    <Text style={{fontSize: 30}}>Hello World</Text>
+                    <Button title="<= Back to Splash" 
+                    onPress = {() => this.props.navigation.navigate("Splash")}></Button>
+                    <Text style={{height: 30}}> </Text>
+                    <Button title="Go to Truth=>"
+                    onPress ={() => this.props.navigation.navigate("Truth")}></Button>
+                </ScrollView>
+            </SafeAreaView>
         );
     }
 }

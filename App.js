@@ -8,28 +8,24 @@
 
 import React from 'react';
 import {
-  SafeAreaView,
   StyleSheet,
-  ScrollView,
-  View,
-  Text,
-  StatusBar,
 } from 'react-native';
-
-import {
-  Header,
-  LearnMoreLinks,
-  Colors,
-  DebugInstructions,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
 
 import createAnimatedSwitchNavigator from 'react-navigation-animated-switch';
 import { createAppContainer } from 'react-navigation';
 import { Transition } from 'react-native-reanimated';
 import splashScreen from './pages/Splash';
 import homeScreen from './pages/Home';
-import truthScreen from './pages/Truth';
+import truthScreen from './pages/Truth'; 
+
+import { setRootViewBackgroundColor } from 'react-native-root-view-background';
+
+
+const styles = StyleSheet.create({
+  transition:{
+      backgroundColor:'red'
+  }
+});
 
 const myRoutes = createAnimatedSwitchNavigator({
   Splash: splashScreen,
@@ -38,12 +34,13 @@ const myRoutes = createAnimatedSwitchNavigator({
 },
 {
   transition: (
-    <Transition.Together>
+    <Transition.Together style={styles.transition}>
       <Transition.Out type="fade" interpolation="easeOut" durationMs={350} />
       <Transition.In type="slide-left" interpolation="easeInOut" durationMs={500} />
     </Transition.Together>  
   ),
 });
+
 
 export default createAppContainer(myRoutes);
 
