@@ -7,7 +7,8 @@ import mainStyle from '../assets/styles'
 export default class Home extends React.Component{
     render(){
         return (  
-                <View style={mainStyle.container}>
+            <View style={mainStyle.container}>
+                <StatusBar  barStyle="light-content" backgroundColor="transparent" translucent={true} />
                 <ScrollView contentContainerStyle={mainStyle.scrollViewStyle}>
                     <TouchableOpacity style={mainStyle.button} 
                     onPress = {() => this.props.navigation.navigate("Splash")}>
@@ -20,7 +21,7 @@ export default class Home extends React.Component{
                         <Text style={mainStyle.txtButton}>Go to Truth</Text>
                     </TouchableOpacity>
                 </ScrollView>
-                </View>
+            </View>
         );
     }
 }
