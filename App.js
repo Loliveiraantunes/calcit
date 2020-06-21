@@ -18,14 +18,6 @@ import splashScreen from './pages/Splash';
 import homeScreen from './pages/Home';
 import truthScreen from './pages/Truth'; 
 
-import { setRootViewBackgroundColor } from 'react-native-root-view-background';
-
-
-const styles = StyleSheet.create({
-  transition:{
-      backgroundColor:'red'
-  }
-});
 
 const myRoutes = createAnimatedSwitchNavigator({
   Splash: splashScreen,
