@@ -11,7 +11,7 @@ export default class Splash extends React.Component{
       render(){
         return (
             <>
-              <ImageBackground source={require("../img/splash_img.png")} style={styles.bgImage}>
+              <ImageBackground source={require("../assets/img/splash_img.png")} style={styles.bgImage}>
                   <StatusBar  barStyle="light-content" backgroundColor="transparent" translucent={true} />
                 </ImageBackground>
             </>
