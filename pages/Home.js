@@ -5,9 +5,6 @@ import { SafeAreaView } from 'react-navigation';
 import Style from '../assets/styles'
 
 const styles = StyleSheet.create({
-    scrollView: {
-    marginHorizontal: 20,
-    },
     text: {
     fontSize: 42,
     },
@@ -18,7 +15,7 @@ export default class Home extends React.Component{
         return (
             <SafeAreaView style={Style.container}>
                 <StatusBar  barStyle="light-content" backgroundColor="transparent" translucent={true} />
-                <ScrollView style={styles.scrollView}>
+                <ScrollView>
                     <Text style={{fontSize: 30}}>Hello World</Text>
                     <Button title="<= Back to Splash" 
                     onPress = {() => this.props.navigation.navigate("Splash")}></Button>
