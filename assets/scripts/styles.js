@@ -5,6 +5,8 @@ const styles = StyleSheet.create({
 
     imgCard: {
         marginBottom: 23,
+        maxWidth: 120,
+        maxHeight: 80
         
     },  
 
@@ -16,6 +18,7 @@ const styles = StyleSheet.create({
         marginHorizontal: 20,
         alignItems: "center",
         justifyContent: "center",
+        width: "80%",
         },
 
     transition:{
@@ -46,7 +49,32 @@ const styles = StyleSheet.create({
     scrollViewStyle: {
         flexGrow: 1, 
         justifyContent: "center",
-        alignItems: "center", 
+        alignItems: "center",
+        height: '95%',
+
+    },
+
+    inputTxtStyle: {
+        width: "67%",
+        height: "10%",
+        backgroundColor: "#fff"
+    },
+
+    card: {
+        width: "45%",
+        height: "22%",
+        elevation: 3,
+        backgroundColor: '#fff',
+        borderRadius: 8,
+        borderColor: '#33cbed',
+        borderWidth: 2,
+        textAlign: "center",
+        alignItems: 'center', 
+    },
+
+    cardContent:{
+        marginHorizontal: 8,
+        marginHorizontal: 10,
     }
 
   });
