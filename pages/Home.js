@@ -3,7 +3,8 @@ import React, {Component, useState} from 'react';
 import {View, Text, StyleSheet, TextInput, ScrollView, StatusBar, TouchableOpacity, Image} from 'react-native';
 import mainStyle from '../assets/scripts/styles';
 import Card from '../assets/scripts/card';
-export default function Home(){
+
+export default function Home({navigation}){
 
     const [n1, setN1] = useState(0);
     const [n2, setN2] = useState(0);
@@ -47,9 +48,7 @@ export default function Home(){
                     placeholder='' onChangeText={(val) => setN2(val)}/>
                 <Text style={{height: 15}} />
                 <ResultPlus/>
-                <Text style={mainStyle.txtDescription}>Result: {resultado}</Text>
-                
-                
+                <Text style={mainStyle.txtDescription}>Result: {resultado}</Text>     
             </ScrollView>
         </View>
     );

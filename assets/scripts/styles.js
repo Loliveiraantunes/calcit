@@ -50,7 +50,7 @@ const styles = StyleSheet.create({
         flexGrow: 1, 
         justifyContent: "center",
         alignItems: "center",
-        height: '95%',
+        height: '95.5%',
 
     },
 
