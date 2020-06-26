@@ -1,14 +1,4 @@
-export default function Calcs(){
-    const calculateMethods = [
-        {
-            id: 1,
-            name: 'testName1',
-            description: 'someDescription1'
-        },
-        {
-            id: 2,
-            name: 'testName2',
-            description: 'someDescription2'
-        }
-    ]
-}
+export const calcs = [
+    { id: 1, image: require('../../assets/img/save_image.png'), name: 'testName1', description: 'someDescription1'},
+    { id: 2, image: require('../../assets/img/save_image.png'), name: 'testName2', description: 'someDescription2'},
+]
