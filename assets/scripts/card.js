@@ -1,13 +1,18 @@
 import React, {Component, useState} from 'react';
-import {View, Text, StyleSheet, TextInput, ScrollView, StatusBar, TouchableOpacity} from 'react-native';
-import styles from '../scripts/styles';
+import {View, Text, Image} from 'react-native';
+import mainStyle from '../scripts/styles';
+import {calcList} from '../scripts/Calcs';
 
-export default function CardHome(props){
+export default function CardHome(){
     return(
-        <View style={styles.card}>
-            <View styles={styles.cardContent}>
-                {props.children}
+        calcList.map(f => (
+            <View key={f.id} style={mainStyle.card}>
+                <View styles={mainStyle.cardContent}>
+                    <Image style={mainStyle.imgCard} source ={f.image} />
+                    <Text style={{color: '#f31203', fontSize: 15, marginTop: -25}}>{f.name}</Text>
+                    <Text style={{color: '#191b1c', fontSize: 12}}>{f.description}</Text>
+                </View>
             </View>
-        </View>
+         ))
     )
 }

@@ -16,13 +16,13 @@ import { createAppContainer } from 'react-navigation';
 import { Transition } from 'react-native-reanimated';
 import splashScreen from './pages/Splash';
 import homeScreen from './pages/Home';
-import truthScreen from './pages/Truth'; 
+import truthScreen from './pages/CalcMethod'; 
 
 
 const myRoutes = createAnimatedSwitchNavigator({
   Splash: splashScreen,
   Home: homeScreen,
-  Truth: truthScreen,
+  CalcMethod: truthScreen,
 },
 {
   transition: (
