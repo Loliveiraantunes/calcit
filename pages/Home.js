@@ -10,6 +10,11 @@ export default function Home({navigation}){
     const [n2, setN2] = useState(0);
     const [resultado, setResultado] = useState(0);
 
+    const [formulas, setFormulas] = useState([
+        { id: 1, name: "testName1", description: "someDescript1"},
+        { id: 2, name: "testName2", description: "someDescription2"},
+    ]);
+
     function plus(){ 
         setResultado(parseInt(n1, 10) + parseInt(n2, 10));
     }
@@ -27,12 +32,14 @@ export default function Home({navigation}){
         <View>
             <StatusBar  barStyle="light-content" backgroundColor="transparent" translucent={true} />
             <ScrollView contentContainerStyle={mainStyle.scrollViewStyle}>
-                <Text style={{height: 100}}></Text>              
-                <Card>
-                    <Image style={mainStyle.imgCard} source ={require('../assets/img/save_image.png')} />
-                    <Text style={{color: '#f31203', fontSize: 15, marginTop: -25}}>Name Here</Text>
-                    <Text style={{color: '#191b1c', fontSize: 12}}>Description here</Text>
-                </Card>
+                <Text style={{height: 100}}></Text>
+                { formulas.map(f => (                            
+                    <Card key={f.id}>
+                        <Image style={mainStyle.imgCard} source ={require('../assets/img/save_image.png')} />
+                        <Text style={{color: '#f31203', fontSize: 15, marginTop: -25}}>{f.name}</Text>
+                        <Text style={{color: '#191b1c', fontSize: 12}}>{f.description}</Text>
+                    </Card>
+                ))}
                 <Text style={{height: 30}} />
                 <TouchableOpacity style={mainStyle.button}
                 onPress ={() => navigation.navigate('Truth')}>
