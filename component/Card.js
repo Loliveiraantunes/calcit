@@ -1,17 +1,16 @@
 import React from 'react';
-import {View, Text, Image, StyleSheet } from 'react-native';
+import {View, Text, Image, StyleSheet, ImageBackground } from 'react-native';
 import mainStyle from '../assets/scripts/styles';
+import { ScrollView } from 'react-native-gesture-handler';
 
 
 const styles = StyleSheet.create({
     card: {
         width: "90%",
-        height: 250,
-        elevation: 3,
-        backgroundColor: '#fff',
+        height: 350,
+        elevation: 5,
+        backgroundColor: '#303030',
         borderRadius: 8,
-        borderColor: '#33cbed',
-        borderWidth: 2,
         textAlign: "center",
         alignItems: 'center',
         marginTop:15,
@@ -19,8 +18,9 @@ const styles = StyleSheet.create({
     },
 
     cardContent:{
-        marginHorizontal: 8,
-        marginHorizontal: 10,
+        width:"100%",
+        height:"100%",
+        alignItems:"center"
     },
 
     imgCard: {
@@ -34,9 +34,14 @@ export default class CardHome extends React.Component{
     render(){
         return(
             <View style={styles.card}>
-                    <Image style={styles.imgCard} source={this.props.image} />
-                    <Text style={{color: '#f31203', fontSize: 15, marginTop: -25}}>{this.props.name}</Text>
-                    <Text style={{color: '#191b1c', fontSize: 12}}>{this.props.description}</Text>
+                <ImageBackground style={styles.cardContent} source={require("../assets/img/card_bg.png")}>
+                    <ScrollView vertical={true} style={{padding:10}}>
+                        <Image style={styles.imgCard} source={this.props.image} />
+                        <Text style={{color: '#1c95dd', fontSize:16, marginTop: -25}}>{this.props.name}</Text>
+                        <Text style={{color: '#fff', fontSize: 12}}>{this.props.description}</Text>
+                    </ScrollView>
+                  
+                </ImageBackground>
             </View>
         )
     }
