@@ -2,14 +2,11 @@
 import {StyleSheet} from 'react-native';
 
 const styles = StyleSheet.create({
-
-    imgCard: {
-        marginBottom: 23,
-        maxWidth: 120,
-        maxHeight: 80
-        
-    },  
-
+    content:{
+        flex:1,
+        paddingTop:20
+    },
+ 
     container: {
         flex: 1,
         backgroundColor: '#242424',
@@ -26,19 +23,20 @@ const styles = StyleSheet.create({
     },
 
     button: {
-        width: '85%',
-        alignItems: "center",
+        width: '80%',
+        alignSelf:"center",
         backgroundColor: "#ff5725",
         padding: 10,
         fontSize: 22,
         color: "#3f2e29",
         borderRadius: 10,
-        marginBottom: 5,
+        margin:20
     },
 
     txtButton: {
         fontWeight: "bold",
         color: "#f3f9f2",
+        textAlign:"center"
     },
 
     txtDescription: {
@@ -50,8 +48,6 @@ const styles = StyleSheet.create({
         flexGrow: 1, 
         justifyContent: "center",
         alignItems: "center",
-        height: '95.5%',
-
     },
 
     inputTxtStyle: {
@@ -59,23 +55,6 @@ const styles = StyleSheet.create({
         height: "10%",
         backgroundColor: "#fff"
     },
-
-    card: {
-        width: "45%",
-        height: "22%",
-        elevation: 3,
-        backgroundColor: '#fff',
-        borderRadius: 8,
-        borderColor: '#33cbed',
-        borderWidth: 2,
-        textAlign: "center",
-        alignItems: 'center', 
-    },
-
-    cardContent:{
-        marginHorizontal: 8,
-        marginHorizontal: 10,
-    }
 
   });
   
