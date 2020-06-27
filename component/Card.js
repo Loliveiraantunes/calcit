@@ -37,7 +37,7 @@ export default class CardHome extends React.Component{
                 <ImageBackground style={styles.cardContent} source={require("../assets/img/card_bg.png")}>
                     <ScrollView vertical={true} style={{padding:10}}>
                         <Image style={styles.imgCard} source={this.props.image} />
-                        <Text style={{color: '#1c95dd', fontSize:16, marginTop: -25}}>{this.props.name}</Text>
+                        <Text style={{color: '#1c95dd', fontSize:16,marginBottom:15}}>{this.props.name}</Text>
                         <Text style={{color: '#fff', fontSize: 12}}>{this.props.description}</Text>
                     </ScrollView>
                   
