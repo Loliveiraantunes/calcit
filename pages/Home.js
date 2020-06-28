@@ -6,11 +6,11 @@ import Card from '../component/Card';
 
 export default function Home({navigation}){
     const [calcList, setCalclist] = useState([
-        {id: 1, image: require('../assets/img/save_image.png'), name: 'Fórmula de Fair-Whipple-Hsiao (Rugosas)', description: `Cálculo de perda de carga distribuída em tubulações rugosas em sistemas de água fria.\n
+        {id: 1, image: require('../assets/img/fwh1_dividido.png'), name: 'Fórmula de Fair-Whipple-Hsiao (Rugosas)', description: `Cálculo de perda de carga distribuída em tubulações rugosas em sistemas de água fria.\n
         J = Perda de carga, em kPa/m
         Q = vazão, em L/s
         d = diâmetro interno, em mm`},
-        {id: 2, image: require('../assets/img/save_image.png'), name: 'Fórmula de Fair-Whipple-Hsiao (Lisas)', description: `Cálculo de perda de carga distribuída em tubulações lisas em sistemas de água fria.\n
+        {id: 2, image: require('../assets/img/fwh2_dividido.png'), name: 'Fórmula de Fair-Whipple-Hsiao (Lisas)', description: `Cálculo de perda de carga distribuída em tubulações lisas em sistemas de água fria.\n
         J = Perda de carga, em kPa/m
         Q = vazão, em L/s
         d = diâmetro interno, em mm`},

@@ -25,8 +25,8 @@ const styles = StyleSheet.create({
 
     imgCard: {
         marginBottom: 23,
-        maxWidth: 120,
-        maxHeight: 80
+        maxWidth: "100%",
+        maxHeight: 100
         
     }})
 export default class CardHome extends React.Component{

@@ -27,8 +27,8 @@ const myRoutes = createAnimatedSwitchNavigator({
 {
   transition: (
     <Transition.Together>
-      <Transition.Out type="slide-right" interpolation="easeOut" durationMs={400} />
-      <Transition.In type="slide-left" interpolation="easeInOut" durationMs={500} />
+      <Transition.Out type="slide-right" interpolation="easeOut" durationMs={300} />
+      <Transition.In type="slide-left" interpolation="easeInOut" durationMs={200} />
     </Transition.Together>  
   ),
 });
