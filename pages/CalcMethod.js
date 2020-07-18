@@ -1,7 +1,7 @@
 import React, {useState, Component} from 'react';
 import {View, Text, TextInput, TouchableOpacity, StatusBar, Submit} from 'react-native';
 import mainStyle from '../assets/scripts/styles';
-import getRealm from '../services/RealmDb';
+import getRealm from '../services/realm';
 
 const txtTruth = "BK > McDonalds"
 
